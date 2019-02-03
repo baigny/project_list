@@ -16,7 +16,7 @@ There are four modules in this assignment:
 * User Login
 * User Registeration
 * Customer Add + List
-* Produt Add + List
+* Product Add + List
 
 **Login page**    
 login form for users to sign in
