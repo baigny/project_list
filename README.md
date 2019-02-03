@@ -10,6 +10,7 @@ The project uses JSON Server to fetch datas from it's database.
 To Run JSON Server, you need to run on another port : 3001 
 **json-server --watch database.json --port 3001**
 
+**MODULE DESCRIPTION**
 
 There are four modules in this assignment:
 * User Login
