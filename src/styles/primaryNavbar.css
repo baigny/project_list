@@ -1,0 +1,60 @@
+.customized-navbar {
+    background-image: linear-gradient(to bottom,#ffffff 0,#ffffff 100%);
+    border: 0;
+}
+
+.navbar {
+    min-height: 80px;
+}
+  
+.navbar-brand {
+    padding: 0 15px;
+    height: 80px;
+    line-height: 80px;
+}
+
+.navbar-brand>img{
+    height: inherit;
+}
+
+.navbar-toggle {
+    /* (80px - button height 34px) / 2 = 23px */
+    margin-top: 23px;
+    padding: 9px 10px !important;
+}
+
+.navbar-inverse .navbar-toggle, .navbar-inverse .navbar-toggle,
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover{
+    background-color: #265a88;
+    border: #FFF;
+}
+
+.navbar-inverse .navbar-nav>li>a,
+.navbar-inverse .navbar-nav>li>a:focus{
+    color: #000;
+    font-weight: bolder;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav > li > a {
+        /* (80px - line-height of 27px) / 2 = 26.5px */
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 16.5px;
+        margin-bottom: 16.5px;
+        line-height: 27px;
+    }
+}
+
+.navbar-inverse .navbar-nav>li>a:hover{
+    color: #265a88;
+}
+
+.navbar-inverse .navbar-nav>.active>a, 
+.navbar-inverse .navbar-nav>.active>a:focus, 
+.navbar-inverse .navbar-nav>.active>a:hover{
+    color: #FFF;
+    background-color: #265a88;
+    background-image: none;
+    border-radius: 7px;
+}

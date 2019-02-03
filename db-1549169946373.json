@@ -1,0 +1,106 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "nabil",
+      "password": "12345"
+    },
+    {
+      "id": 2,
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "username": "nabilyb",
+      "password": "three333",
+      "id": 3
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "web app projects",
+      "date": "06052018",
+      "description": "creating a web app",
+      "customers": [
+        {
+          "id": 1,
+          "email": "triangle@gmail.com",
+          "name": "alex",
+          "number": "7747282"
+        },
+        {
+          "id": 2,
+          "email": "scientificmaps@gmail.com",
+          "name": "ramos",
+          "number": "34354545"
+        },
+        {
+          "name": "webyyyzz",
+          "number": "48343849",
+          "email": "webyyyzz@yahoo.com"
+        },
+        {
+          "name": "websquare",
+          "number": "34498348",
+          "email": "websquare@hotmail.com"
+        },
+        {
+          "name": "alicia",
+          "number": "23293293",
+          "email": "alicia@squarered.com"
+        },
+        {
+          "name": "johnny",
+          "number": "23838238",
+          "email": "jhonny@jhonny.com"
+        },
+        {
+          "name": "alex smith",
+          "number": "378437434",
+          "email": "smith@webworld.com"
+        },
+        {
+          "name": "sachin",
+          "number": "38478387",
+          "email": "sachin@yahoo.com"
+        },
+        {
+          "name": "razzaq",
+          "number": "39439483",
+          "email": "razzaq@hotmail.com"
+        },
+        {
+          "name": "Hello World",
+          "number": "348343",
+          "email": "helloworld123@gmail.com"
+        }
+      ]
+    },
+    {
+      "name": "demo one",
+      "date": "2015-08-26",
+      "description": "MERN project",
+      "customers": [],
+      "id": 2
+    },
+    {
+      "name": "demo two project",
+      "date": "2012-10-23",
+      "description": "demo two project laravel framework",
+      "customers": [
+        {
+          "name": "christian",
+          "number": "3943848",
+          "email": "christian@gmail.com"
+        },
+        {
+          "name": "donald",
+          "number": "2439239",
+          "email": "donaldroger@yahoo.com"
+        }
+      ],
+      "id": 3
+    }
+  ]
+}
