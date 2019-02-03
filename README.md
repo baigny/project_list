@@ -19,17 +19,27 @@ There are four modules in this assignment:
 * Product Add + List
 
 **Login page**    
+
 login form for users to sign in
+
 create new user form for users to add up
 
 **Project Page**
+
 Project Listing
+
 Adding up Projects -- Form details: name, date, project description
+
 Routing to Project Detail View from project list
 
+
 **Project Detailed View**
+
 Display Project Info
+
 Display Customer Info
+
 Adding  new Customers -- Form details: name, phone no, email, address
+
 
 
