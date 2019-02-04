@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import Modal from 'react-responsive-modal';
 import AddCustomerToProject from './AddCustomerToProject.jsx';
+import ReactPaginate from 'react-paginate';
 import '../styles/customer.css';
 
 
@@ -20,7 +21,9 @@ export default class ProjectDetail extends Component {
                   number: ''
                 }]
             },
-             open: false,
+            open: false,
+            rangeStart: 1,
+            rangeEnd: 8
         }
     }  
 
@@ -32,6 +35,14 @@ export default class ProjectDetail extends Component {
       onCloseModal = () => {
         this.setState({ open: false });
       };
+
+      setRange = (e) => {
+        const itemsPerPage = 8
+        this.setState({
+          rangeStart: (e.selected*itemsPerPage)+1,
+          rangeEnd: (e.selected*itemsPerPage)+itemsPerPage
+        })
+      }
 
       componentDidMount(){
         var id = this.props.id
@@ -56,6 +67,21 @@ export default class ProjectDetail extends Component {
       
       render() {
         const { open } = this.state;
+        const itemsPerPage = 8;
+
+        var paginateItems = <ReactPaginate pageCount={Math.ceil(this.state.projectDetails.customers.length/itemsPerPage)}
+                              pageRangeDisplayed={5}
+                              marginPagesDisplayed={1} 
+                              onPageChange={this.setRange}
+                              disabledClassName="disabledPagination"
+                              containerClassName="custom-container-pagination"
+                              pageClassName="custom-li-pagination"
+                              previousClassName="custom-li-pagination"
+                              nextClassName="custom-li-pagination"
+                              breakClassName="custom-break-pagination"
+                              activeClassName="custom-active-pagination"
+                              activeLinkClassName="custom-active-link-pagination"
+                              pageLinkClassName=""/>
         return (
           <div>
             <div className="custom-padding-10 custom-right">
@@ -65,7 +91,6 @@ export default class ProjectDetail extends Component {
               <Button type="button" onClick={this.onOpenModal}>Add Customer</Button>
             </div>
             <div className="custom-padding-20">
-                  
                   Name : <span>{this.state.projectDetails.name}</span>
                   <br/>
                   Date : <span>{this.state.projectDetails.date}</span>
@@ -76,9 +101,12 @@ export default class ProjectDetail extends Component {
                   {this.state.projectDetails.customers.length ? 
                     <div>
                     List of Customers:
-                         {this.state.projectDetails.customers.map((item, i) => {
+                    {paginateItems}
+                         {this.state.projectDetails.customers.filter(item => (item.id>=this.state.rangeStart && item.id<=this.state.rangeEnd)).map((item, i) => {
                           return (<div className="customer-line" key={i}>
                               <div>
+                                Customer ID: {item.id}
+                                <br/>
                                 Name: {item.name}
                                 <br/>
                                 Number: {item.number}
@@ -95,6 +123,8 @@ export default class ProjectDetail extends Component {
                     :
                     null
                   }
+
+                  {paginateItems}
 
 
                   <br/>

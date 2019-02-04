@@ -60,6 +60,7 @@ export default class AddCustomerToProject extends Component {
       postNewCustomer = () => {
         let body = this.state.projectDetails
         body.customers.push({
+                              "id": this.state.projectDetails.customers.length+1,
                               "name": this.state.customerInputs.name,
                               "number": this.state.customerInputs.number,
                               "email": this.state.customerInputs.email

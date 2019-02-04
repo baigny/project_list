@@ -12,3 +12,26 @@
   max-width: 500px;
   width: 100%;
 }
+
+.disabledPagination{
+	cursor:  not-allowed;
+}
+
+.custom-container-pagination{
+	display: inline-flex;
+	list-style: none;
+	margin:  10px;
+}
+
+.custom-li-pagination, .custom-break-pagination{
+	padding: 5px 10px;
+    border: 1px solid #007bff;
+}
+
+.custom-active-pagination{
+	background-color: #007bff;
+}
+
+.custom-active-link-pagination, .custom-active-link-pagination:hover{
+	color: white;
+}
